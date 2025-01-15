@@ -1,0 +1,116 @@
+~~~~~~~~~~~~~~~ Title  ~~~~~~~~~~~~~~~
+Ice Cream Website || TailwindCSS
+
+
+~~~~~~~~~~~~~~~ Navbar ~~~~~~~~~~~~~~~
+Home | Shop | Ingredients | Blogs
+
+
+~~~~~~~~~~~~~~~ Home ~~~~~~~~~~~~~~~
+Loaded with Flavor
+Refreshing Taste
+
+~~~~~~~~~~~~~~~ featured-info ~~~~~~~~~~~~~~~
+Top Ice <br>
+Cream <br>
+Spots
+
+It’s quite possible that we are living in the golden age of ice cream innovation. Old-school creameries are churning out vanilla bean masterpieces honed over generations while new shops are tossing the term “chef” 
+
+Read More
+
+Wave <br>
+Artisan <br>
+Shops
+
+These ice cream shops represent everything that is well and good: new-wave artisan shops challenging the very notion of what should be placed on a cone (or stick, or between cookies), old-school parlors learning…
+
+Read More
+
+~~~~~~~~~~~~~~~ Promo ~~~~~~~~~~~~~~~
+Celebrate Sweetness Every Day
+
+Incorporating liquor into ice cream feels like a small feat when you think about how creative…
+
+Reliable Frozen Shipping
+
+Affordable Flat-Rate Shipping Nationwide
+Picture-Perfect Unboxing
+
+View More
+
+~~~~~~~~~~~~~~~ Shop ~~~~~~~~~~~~~~~
+Explore Our Flavor
+
+Sorbet Street Treats
+0 review
+$12.00
+
+Darkest Chocolate
+9 review
+$14.00
+
+Blackout Chocolate Cake
+5 review
+$17.00
+
+Sunshine
+1 review
+$12.00
+
+~~~~~~~~~~~~~~~ Seasonal Promo ~~~~~~~~~~~~~~~
+hello
+Summer!
+
+-32%
+
+creamy
+enjoy
+
+~~~~~~~~~~~~~~~ ingredients ~~~~~~~~~~~~~~~
+Savory Ingredients
+Assorted Ingredients
+
+Vanilla
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+
+Mango
+Taro
+Coconut
+
+Cocoa
+Strawberry
+Green Tea
+Orange
+
+
+~~~~~~~~~~~~~~~ Flavor Info ~~~~~~~~~~~~~~~
+Vanilla
+Vanilla ice cream needs the absolute balance between sweetness, fatness and bitterness that is very...
+
+Strawberry
+The primary ingredient is pureed fresh strawberries, setting it apart from other strawberry-flavored milk...
+
+Orange
+The ice cream offers a sweet honey flavor paired with an orange aroma, complemented by rich milk that is...
+
+Chocolate
+Every piece of melted chocolate combines with fresh milk and creamy, thick butter to create an unexpectedly...
+
+~~~~~~~~~~~~~~~ Blogs ~~~~~~~~~~~~~~~
+Our Blogs
+Flavorful Upgrade
+
+Business Tips
+April 3, 2024
+Trending Ice Cream Flavors for This Year
+
+The Skill of Making Gourmet Ice Cream
+Ice Cream Trends to Increase Revenue
+
+Read More
+
+~~~~~~~~~~~~~~~ Newsletter ~~~~~~~~~~~~~~~
+Sign up to our newsletter!
+Stay Updated on New Flavors and More
+Subscribe
