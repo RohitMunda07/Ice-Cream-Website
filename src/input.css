@@ -1,3 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playball&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Kalnia:wght@100..700&family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playball&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Kalnia:wght@100..700&family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playball&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+    @apply bg-yellow-100 scroll-smooth overflow-x-hidden;
+}
+
+body {
+    @apply bg-white tracking-wider max-w-[1920px] mx-auto overflow-x-hidden;
+}
+
+h1,
+h4 {
+    @apply text-3xl font-Kalnia;
+}
+
+h1 {
+    @apply sm:text-5xl md:text-7xl lg:text-8xl text-firstcolor;
+}
+
+h3 {
+    @apply font-semibold font-Kalnia text-xl;
+}
+
+.ul-link {
+    @apply text-xl font-bold duration-300;
+}
+
+.ul-link:hover,
+.active {
+    @apply text-firstcolor duration-300;
+}
+
+.card_animate {
+    @apply scale-105 duration-500 cursor-pointer;
+}
+
+.flavor_item img {
+    @apply duration-700;
+}
+.flavor_item:hover img{
+    @apply scale-110;
+}
+
+.blog-item:hover {
+    @apply cursor-pointer text-firstcolor duration-500
+}

@@ -3,6 +3,9 @@ module.exports = {
   content: ["./*.{html,js}"],
   theme: {
     extend: {
+      backgroundImage: {
+        'promo': "url('/assets/images/promo_bg.jpg')", // Ensure the URL is in quotes
+      },
       colors: {
         firstcolor: "#E10914",
         cardcolor_1: "#FFF3E1",

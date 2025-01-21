@@ -1,12 +1,641 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ice Cream</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- REMIX ICONS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- OUTPUT CSS -->
     <link rel="stylesheet" href="../src/output.css">
 </head>
+
 <body>
+    <header class="w-full fixed bg-white top-0 left-0 z-10 flex items-center">
+        <nav id="navBar" class="container flex flex-row justify-between items-center h-16 sm:h-20">
+            <!-- hambergur -->
+            <div class="cursor-pointer text-xl sm:text-2xl lg:hidden">
+                <i class="ri-menu-4-line" id="hambergur"></i>
+            </div>
+
+            <!-- logo -->
+            <div>
+                <img src="./assets/images/logo.png" class="w-32 md:w-40" alt="logo">
+            </div>
+
+            <!-- menu content -->
+            <div id="nav-menu"
+                class="absolute top-0 left-[-100%] min-h-[80vh] w-full bg-white border-b border-emerald-800 px-5 duration-500 ease-out overflow-hidden z-20 md:px-10 md:w-1/2 lg:static lg:min-h-fit lg:border-0 lg:bg-transparent lg:w-auto">
+
+                <ul class="flex flex-col items-start gap-8 pt-20 text-xl sm:text-2xl lg:flex-row lg:pt-0">
+                    <li class="text-black font-bold">
+                        <a href="#home" class="ul-link active">Home</a>
+                    </li>
+
+                    <li class="text-black font-bold">
+                        <a href="#shop" class="ul-link">Shop</a>
+                    </li>
+
+                    <li class="text-black font-bold">
+                        <a href="#ingredients" class="ul-link">Ingredients</a>
+                    </li>
+
+                    <li class="text-black font-bold">
+                        <a href="#blogs" class="ul-link">Blogs</a>
+                    </li>
+
+                </ul>
+
+                <!-- close button -->
+                <div class="text-xl sm:text-2xl absolute top-5 right-5 cursor-pointer lg:hidden">
+                    <i class="ri-close-large-line" id="closeIcon"></i>
+                </div>
+
+                <!-- icons -->
+                <div class="flex items-center gap-5 text-xl sm:text-2xl cursor-pointer pt-20 lg:hidden">
+                    <i class="ri-search-line"></i>
+                    <i class="ri-user-line"></i>
+                    <div class="relative">
+                        <i class="ri-heart-line"></i>
+                        <span
+                            class="font-bold absolute top-0 left-4 bg-firstcolor text-white text-xs w-5 h-5 rounded-full grid place-items-center">0</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="flex items-center gap-5 text-xl cursor-pointer">
+                <i class="hidden lg:block ri-search-line"></i>
+                <i class="hidden lg:block ri-user-line"></i>
+                <div class="hidden lg:block relative">
+                    <i class="ri-heart-line"></i>
+                    <span
+                        class="font-bold absolute top-0 left-4 bg-firstcolor text-white text-xs w-5 h-5 rounded-full grid place-items-center">0</span>
+                </div>
+                <div class="relative">
+                    <i class="ri-shopping-cart-line"></i>
+                    <span
+                        class="font-bold absolute top-0 left-4 bg-firstcolor text-white text-xs w-5 h-5 rounded-full grid place-items-center">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- hero -->
+    <section id="home"
+        class=" bg-yellow-400 h-[100vh] flex flex-col items-center justify-center w-full pt-32 pb-5 px-4 relative overflow-hidden">
+        <div class="text-center hero_top">
+            <h4>Loaded with flavour</h4>
+            <h1>Refreshing Taste</h1>
+        </div>
+
+        <!-- Ice Cup -->
+        <div class="relative mt-10">
+            <img src="./assets/images/hero.png" alt="" class="hero_img md:w-96 md:h-96">
+            <img src="./assets/images/funny_monster_1.png"
+                class="hero_outline_1 absolute top-10 left-7 w-10 h-10 -rotate-45 opacity-45" alt="funny monster image">
+            <img src="./assets/images/funny_monster_2.png"
+                class="hero_outline_2 absolute top-10 right-7 w-10 h-10 rotate-45 opacity-45" alt="funny monster image">
+        </div>
+
+        <!-- Leaf Images -->
+        <div class="">
+            <!-- top left -->
+            <img src="/assets/images/leaf_1.png"
+                class="hero_leaf_1 absolute top-28 md:top-32 left-3 md:left-8 w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20" alt="Leaf">
+
+            <!-- top right -->
+            <img src="/assets/images/leaf_2.png"
+                class="hero_leaf_2 absolute top-28 md:top-32 right-3 md:right-8 w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20"
+                alt="Leaf">
+
+            <!-- bottom left -->
+            <img src="/assets/images/leaf_2.png"
+                class="hero_leaf_3 absolute bottom-10 left-3 md:left-8 w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20" alt="Leaf">
+
+            <!-- bottom right -->
+            <img src="/assets/images/leaf_1.png"
+                class="hero_leaf_4 absolute bottom-10 right-3 md:right-8 w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20" alt="Leaf">
+        </div>
+
+    </section>
+
+    <!-- Features Info -->
+    <section class="bg-white w-full flex flex-col md:flex-row md:justify-center pt-20 px-10 gap-16 mb-20 border-b overflow-hidden">
+        <div
+            class="feature_left flex flex-col lg:flex-row items-center md:items-start gap-8 lg:gap-5 border-dashed border-firstcolor border-b-2 pb-5">
+            <h1 class="text-5xl md:max-w-52">Top Ice Cream Spot</h1>
+            <div class="flex flex-col">
+                <p class="max-w-80 text-sm mb-5 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus
+                    veritatis autem officia itaque vero nemo vitae laudantium! Fuga officiis earum explicabo culpa,
+                    asperiores ducimus quo debitis non ad, nostrum ea unde soluta quos incidunt nemo veritatis.
+                </p>
+                <div>
+                    <button
+                        class="border-b-2 border-black font-DMSans hover:text-firstcolor hover:border-firstcolor">Read
+                        More</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div
+            class="feature_right mt-5 md:mt-0 flex flex-col lg:flex-row items-center md:items-start gap-8 lg:gap-5 border-dashed border-firstcolor border-b-2 pb-5">
+            <h1 class="text-5xl md:max-w-52">Wave Artisan Shops</h1>
+            <div class="flex flex-col">
+                <p class="max-w-80 text-sm mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus
+                    veritatis autem officia itaque vero nemo vitae laudantium! Fuga officiis earum explicabo culpa,
+                    asperiores ducimus quo debitis non ad, nostrum ea unde soluta quos incidunt nemo veritatis.</p>
+                <div>
+                    <button
+                        class="border-b-2 border-black font-DMSans hover:text-firstcolor hover:border-firstcolor">Read
+                        More</button>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- Promo -->
+    <section class="pt-20 bg-promo h-[100vh] w-full bg-cover overflow-hidden">
+
+        <div class="container pt-16 relative px-10">
+            <div class="promo_top">
+                <h1 class="text-5xl text-black font-semibold max-w-[720px]">Celebrate Sweetness Every Day</h1>
+                <p class="w-1/2 mt-5 font-DMSans">
+                    Incorporating Liquor into ice cream feels like a small feat when you think about how creative...
+                </p>
+            </div>
+
+            <!-- Icons -->
+            <div class="promo_info mt-10 px-14 h-60 space-y-3">
+                <p class="font-Kalnia text-lg">
+                    <i class="ri-snowflake-line text-orange-500"></i>
+                    Reliable Frozen Shipping
+                </p>
+
+                <p class="font-Kalnia text-lg">
+                    <i class="ri-truck-line text-orange-500"></i>
+                    Affordable Flat-Rate Shipping Nationwide
+                </p>
+
+                <p class="font-Kalnia text-lg">
+                    <i class="ri-box-3-line text-orange-500"></i>
+                    Picture-Perfect Unboxing
+                </p>
+
+                <div class="pt-8">
+                    <button class="bg-white text-black px-5 py-1 rounded-l-xl rounded-r-xl font-DMSans">View More <i
+                            class="ri-arrow-right-line"></i></button>
+                </div>
+            </div>
+
+            <!-- Cone Image -->
+            <div class="">
+                <img src="/assets/images/promo_1.png" alt="Cone Image"
+                    class="promo_img hidden lg:block absolute top-20 xl:top-14 right-0 xl:-right-5 lg:w-[350px] lg:h-[350px] xl:w-[650px] xl:h-[650px] ">
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="pt-20 bg-white p-12 pb-10">
+
+        <h1 class="text-center">Explore Our Flavor</h1>
+
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper pt-10 pb-20">
+
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <!-- Product image -->
+                    <img src="/assets/images/product_1.jpg" alt="product_1" class="w-[530px] h-[530px]">
+
+                    <!-- Product cardription -->
+                    <div class="px-4 mt-3">
+                        <h3>Sorbet Street Treats</h3>
+                        <div>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+
+                            30 reviews
+                        </div>
+                        <div class="font-DMSans">$12.00</div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <!-- Product image -->
+                    <img src="/assets/images/product_2.jpg" alt="product_2" class="w-[530px] h-[530px]">
+
+                    <!-- Product cardription -->
+                    <div class="px-4 mt-3">
+                        <h3>Sorbet Street Treats</h3>
+                        <div>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+
+                            30 reviews
+                        </div>
+                        <div class="font-DMSans">$12.00</div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <!-- Product image -->
+                    <img src="/assets/images/product_3.jpg" alt="product_3" class="w-[530px] h-[530px]">
+
+                    <!-- Product cardription -->
+                    <div class="px-4 mt-3">
+                        <h3>Sorbet Street Treats</h3>
+                        <div>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+
+                            30 reviews
+                        </div>
+                        <div class="font-DMSans">$12.00</div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <!-- Product image -->
+                    <img src="/assets/images/product_4.jpg" alt="product_4" class="w-[530px] h-[530px]">
+
+                    <!-- Product cardription -->
+                    <div class="px-4 mt-3">
+                        <h3>Sorbet Street Treats</h3>
+                        <div>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+
+                            30 reviews
+                        </div>
+                        <div class="font-DMSans">$12.00</div>
+                    </div>
+                </div>
+
+                <!-- Slider 5 -->
+                <div class="swiper-slide">
+                    <!-- Product image -->
+                    <img src="/assets/images/product_5.jpg" alt="product_5" class="w-[530px] h-[530px]">
+
+                    <!-- Product cardription -->
+                    <div class="px-4 mt-3">
+                        <h3>Sorbet Street Treats</h3>
+                        <div>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+
+                            30 reviews
+                        </div>
+                        <div class="font-DMSans">$12.00</div>
+                    </div>
+                </div>
+
+                <!-- Slider 6 -->
+                <div class="swiper-slide">
+                    <!-- Product image -->
+                    <img src="/assets/images/product_3.jpg" alt="product_3" class="w-[530px] h-[530px]">
+
+                    <!-- Product cardription -->
+                    <div class="px-4 mt-3">
+                        <h3>Sorbet Street Treats</h3>
+                        <div>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+
+                            30 reviews
+                        </div>
+                        <div class="font-DMSans">$12.00</div>
+                    </div>
+                </div>
+
+                <!-- Slider 7 -->
+                <div class="swiper-slide">
+                    <!-- Product image -->
+                    <img src="/assets/images/product_1.jpg" alt="product_1" class="w-[530px] h-[530px]">
+
+                    <!-- Product cardription -->
+                    <div class="px-4 mt-3">
+                        <h3>Sorbet Street Treats</h3>
+                        <div>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+
+                            30 reviews
+                        </div>
+                        <div class="font-DMSans">$12.00</div>
+                    </div>
+                </div>
+
+                <!-- Slider 8 -->
+                <div class="swiper-slide">
+                    <!-- Product image -->
+                    <img src="/assets/images/product_4.jpg" alt="product_4" class="w-[530px] h-[530px]">
+
+                    <!-- Product cardription -->
+                    <div class="px-4 mt-3">
+                        <h3>Sorbet Street Treats</h3>
+                        <div>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+
+                            30 reviews
+                        </div>
+                        <div class="font-DMSans">$12.00</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-prev text-firstcolor"></div>
+            <div class="swiper-button-next text-firstcolor"></div>
+        </div>
+
+        <!-- Seasonal Promo -->
+        <div id="container" class="mt-14 flex flex-col items-center lg:flex-row overflow-hidden ">
+            <div class="relative overflow-hidden">
+                <img src="/assets/images/seasonal-promo_1.jpg" alt="seasonal-promo-image" class="container-items">
+                <div class="absolute top-10 text-center left-32 lg:left-10 xl:left-24">
+                    <h4 class="font-Playball font-semibold md:text-4xl text-white">hello</h4>
+                    <h4 class="font-Kalnia font-semibold md:text-5xl lg:text-3xl xl:text-5xl text-white uppercase">
+                        Summer</h4>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden">
+                <img src="/assets/images/seasonal-promo_2.jpg" alt="seasonal-promo-image" class="container-items">
+                <img src="/assets/images/scalloped.svg" alt=""
+                    class="absolute w-24 h-24 md:w-auto md:h-auto lg:w-16 lg:h-16 xl:w-auto xl:h-auto top-20 left-24 md:top-48 lg:top-[8rem] lg:left-10 md:left-36 opacity-95">
+
+                <span
+                    class="absolute top-28 left-[6.5rem] md:top-[14.5rem] lg:top-[9rem] xl:top-[10rem] lg:left-11 md:left-[9.5rem] font-semibold font-Kalnia text-3xl md:text-4xl lg:text-xl xl:text-4xl text-white">-33%</span>
+
+            </div>
+
+            <div class="relative overflow-hidden">
+                <img src="/assets/images/seasonal-promo_3.png" alt="seasonal-promo-image" class="container-items">
+                <div class="absolute bottom-10 text-center left-32 lg:left-24 xl:left-28">
+                    <h4 class="font-Kalnia font-semibold md:text-5xl lg:text-3xl xl:text-5xl text-white uppercase">
+                        creamy</h4>
+                    <h4 class="font-Playball font-semibold md:text-4xl text-white">enjoy</h4>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Ingredients Section -->
+    <section id="ingredients" class="pt-20 bg-emerald-900 text-white p-12 pb-16 overflow-hidden">
+        <div class="ingredients_top text-center">
+            <h2 class="font-Playball text-firstcolor text-3xl">Savory Ingredients</h2>
+            <h4 class="text-5xl">Assorted Ingredients</h4>
+        </div>
+
+        <div class="mt-20 container flex flex-col gap-16">
+            <div class="flex flex-col md:flex-row justify-between gap-16">
+                <div class="ingredients_left flex flex-row">
+                    <img src="/assets/images/vanilla.png" alt="vanilla-image" class="w-32 h-32 mr-4">
+                    <p class="max-w-72">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro labore suscipit,
+                        sint
+                        ipsa quam atque excepturi distinctio placeat consectetur odio.</p>
+                </div>
+                <div class="ingredients_right flex flex-row">
+                    <img src="/assets/images/cocoa.png" alt="cocoa-image" class="w-32 h-32 mr-4">
+                    <p class="max-w-72">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro labore suscipit,
+                        sint
+                        ipsa quam atque excepturi distinctio placeat consectetur odio.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between gap-16">
+                <div class="ingredients_left flex flex-row">
+                    <img src="/assets/images/mango.png" alt="mango-image" class="w-32 h-32 mr-4">
+                    <p class="max-w-72">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro labore suscipit,
+                        sint
+                        ipsa quam atque excepturi distinctio placeat consectetur odio.</p>
+                </div>
+                <div class="ingredients_right flex flex-row">
+                    <img src="/assets/images/strawberry.png" alt="strawberry-image" class="w-32 h-32 mr-4">
+                    <p class="max-w-72">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro labore suscipit,
+                        sint
+                        ipsa quam atque excepturi distinctio placeat consectetur odio.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between gap-16">
+                <div class="ingredients_left flex flex-row">
+                    <img src="/assets/images/taro.png" alt="taro-image" class="w-32 h-32 mr-4">
+                    <p class="max-w-72">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro labore suscipit,
+                        sint
+                        ipsa quam atque excepturi distinctio placeat consectetur odio.</p>
+                </div>
+                <div class="ingredients_right flex flex-row">
+                    <img src="/assets/images/green_tea.png" alt="green_tea-image" class="w-32 h-32 mr-4">
+                    <p class="max-w-72">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro labore suscipit,
+                        sint
+                        ipsa quam atque excepturi distinctio placeat consectetur odio.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between gap-16">
+                <div class="ingredients_left flex flex-row">
+                    <img src="/assets/images/coconut.png" alt="coconut-image" class="w-32 h-32 mr-4">
+                    <p class="max-w-72">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro labore suscipit,
+                        sint
+                        ipsa quam atque excepturi distinctio placeat consectetur odio.</p>
+                </div>
+                <div class="ingredients_right flex flex-row">
+                    <img src="/assets/images/orange.png" alt="orange-image" class="w-32 h-32 mr-4">
+                    <p class="max-w-72">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro labore suscipit,
+                        sint
+                        ipsa quam atque excepturi distinctio placeat consectetur odio.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Flavor Section -->
+    <section class="container p-12">
+        <div class="grid grid-cols-1 place-items-center gap-y-10 sm:grid-cols-2 sm:gap-y-0 sm:gap-x-10 lg:grid-cols-4">
+            <!-- card 1 -->
+            <div class="flavor_item max-w-sm bg-cardcolor_1 py-10 px-6 text-center space-y-5">
+                <figure class="w-full rounded-full border-[5px] border-white overflow-hidden">
+                    <img src="assets/images/flavor_image-1.jpg" alt="flavor_image-1" class="w-full">
+                </figure>
+                <h3>Vanilla</h3>
+                <p class="capitalize font-DMSans">Vanilla Ice Cream Needs The Absolute Balance between
+                    Sweetness, fatness and bitterness that is very...
+                </p>
+                <button
+                    class="bg-white text-black mt-3 rounded-full text-2xl w-10 h-10 hover:bg-firstcolor hover:text-white duration-300"><i
+                        class="ri-arrow-right-s-line"></i>
+                </button>
+            </div>
+
+            <!-- card 2 -->
+            <div class="flavor_item max-w-sm bg-cardcolor_2 py-10 px-6 text-center space-y-5 sm:mt-20 lg:mt-40">
+                <figure class="w-full rounded-full border-[5px] border-white overflow-hidden">
+                    <img src="assets/images/flavor_image-2.jpg" alt="flavor_image-2" class="w-full">
+                </figure>
+                <h3>Strawberry</h3>
+                <p class="capitalize font-DMSans">the primary ingredient is pured fresh strawberry. setting it apart
+                    from other strawberry-flavoured milk....
+                </p>
+                <button
+                    class="bg-white text-black mt-3 rounded-full text-2xl w-10 h-10 hover:bg-firstcolor hover:text-white duration-300"><i
+                        class="ri-arrow-right-s-line"></i>
+                </button>
+            </div>
+
+            <!-- card 3 -->
+            <div class="flavor_item max-w-sm bg-cardcolor_3 py-10 px-6 text-center space-y-5">
+                <figure class="w-full rounded-full border-[5px] border-white overflow-hidden">
+                    <img src="assets/images/flavor_image-3.jpg" alt="flavor_image-3" class="w-full">
+                </figure>
+                <h3>Orange</h3>
+                <p class="capitalize font-DMSans">the ice cream offers a sweet honey flavor paired with an orange aroma.
+                    complemented by rich milk that is..
+                </p>
+                <button
+                    class="bg-white text-black mt-3 rounded-full text-2xl w-10 h-10 hover:bg-firstcolor hover:text-white duration-300"><i
+                        class="ri-arrow-right-s-line"></i>
+                </button>
+            </div>
+
+            <!-- card 4 -->
+            <div class="flavor_item max-w-sm bg-cardcolor_4 py-10 px-6 text-center space-y-5 sm:mt-20 lg:mt-40">
+                <figure class="w-full rounded-full border-[5px] border-white overflow-hidden">
+                    <img src="assets/images/flavor_image-4.jpg" alt="flavor_image-4" class="w-full">
+                </figure>
+                <h3>Chocolate</h3>
+                <p class="capitalize font-DMSans">every piece of melted Chocolate combines w`ith fresh milk and creamy.
+                    thick butter to create an unexpetedly...
+                </p>
+                <button
+                    class="bg-white text-black mt-3 rounded-full text-2xl w-10 h-10 hover:bg-firstcolor hover:text-white duration-300">
+                    <i class="ri-arrow-right-s-line"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blogs" class="bg-white container p-12 pb-20">
+        <div class="blog_top text-center pt-20">
+            <h4 class="font-Playball text-2xl">Our Blog</h4>
+            <h1>Flavourful Upgrade</h1>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-5">
+            <!-- blog 1 -->
+            <div class="blog mt-5 relative overflow-hidden">
+                <img src="/assets/images/blog_1.jpg" alt="blog_1"
+                    class="w-full hover:scale-110 duration-700 cursor-pointer">
+                <h5 class="capitalize font-DMSans text-gray-600 mt-2">business tips - <span class="text-firstcolor"> jan
+                        3,
+                        2025</span></h5>
+                <h3 class="max-w-96 mt-4 capitalize blog-item">Trending ice cream flavours for this year</h3>
+            </div>
+            <!-- blog 2 -->
+            <div class="blog mt-5 relative overflow-hidden">
+                <img src="/assets/images/blog_2.jpg" alt="blog_2"
+                    class="w-full hover:scale-110 duration-700 cursor-pointer">
+                <h5 class="capitalize font-DMSans text-gray-600 mt-2">business tips - <span class="text-firstcolor"> jan
+                        3,
+                        2025</span></h5>
+                <h3 class="max-w-96 mt-4 capitalize blog-item">the skill of making gourmet ice cream</h3>
+            </div>
+            <!-- blog 3 -->
+            <div class="blog mt-5 relative overflow-hidden">
+                <img src="/assets/images/blog_3.jpg" alt="blog_3"
+                    class="w-full hover:scale-110 duration-700 cursor-pointer">
+                <h5 class="capitalize font-DMSans text-gray-600 mt-2">business tips - <span class="text-firstcolor"> jan
+                        3,
+                        2025</span></h5>
+                <h3 class="max-w-96 mt-4 capitalize blog-item">ice cream treands to increase revenue</h3>
+            </div>
+        </div>
+
+        <div class="blog_btn mt-10 text-center">
+            <button class="bg-firstcolor px-4 py-2 rounded-l-full rounded-r-full text-white text-lg">Read More</button>
+        </div>
+
+    </section>
+
+    <!-- NewsLetter -->
+    <footer class="bg-black w-full pb-20">
+        <div class="newsletter text-center container pt-16 p-12">
+            <h1 class="capitalize text-5xl">sign up to our NewsLetter!</h1>
+            <p class="capitalize font-DMSans text-white mt-5">stay updated on new flavor and more</p>
+            <div class="flex flex-row bg-white p-3 rounded-l-full rounded-r-full gap-5 mt-5">
+                <input type="email" name="" id="" placeholder="Your Email.."
+                    class="w-full items-start rounded-l-full rounded-r-full p-3">
+
+                <button class="bg-firstcolor rounded-l-full rounded-r-full px-6 py-2 text-white">Subscribe</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Up -->
+    <a href="#"
+        class="bg-firstcolor fixed right-5 -bottom-1/2 rounded-l rounded-r p-2 text-white  text-2xl hover:translate-y-1 duration-700 cursor-pointer z-50"
+        id="scroll-up">
+        <i class="ri-arrow-up-box-line"></i>
+    </a>
+
+
+    <!-- SWIPER'S JS CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- SCROLL ON REVEAL JS -->
+    <script src="scrollreveal.min.js"></script>
+
+    <!-- MAIN JS -->
+    <script src="main.js"></script>
 </body>
-<div class="bg-green-900">Setup is done</div>
+
 </html>
