@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'promo': "url('./assets/images/promo_bg.jpg')", // Ensure the URL is in quotes
+        'promo': url('./assets/images/promo_bg.jpg'), // Ensure the URL is in quotes
       },
       colors: {
         firstcolor: "#E10914",
